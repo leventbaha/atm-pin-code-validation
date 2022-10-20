@@ -4,7 +4,10 @@
   "description": "An npm library to check if ATM PIN codes are valid or not.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "test-coverage": "jest --collect-coverage --testEnvironment=node --forceExit --maxWorkers=1",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/leventbaha/atm-pin-code-validation/issues"
   },
-  "homepage": "https://github.com/leventbaha/atm-pin-code-validation#readme"
+  "homepage": "https://github.com/leventbaha/atm-pin-code-validation#readme",
+  "devDependencies": {
+    "jest": "^29.2.1"
+  }
 }

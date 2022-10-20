@@ -3,9 +3,11 @@ function validatePIN(pin) {
         return false
     }
     for (let i = 0; i < pin.length; i++) {
-        if (pin[i] > '9' || pin[i] < '0') {
+        if (isNaN(pin[i])) {
             return false
         }
     }
     return true
 }
+
+module.exports = validatePIN
